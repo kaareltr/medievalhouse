@@ -1,16 +1,41 @@
+.taustapilt {
+  max-width: 1058px;
+  min-width: 1058px;
+}
+
 .viide {
   position: relative;
-  background-color: red;
+  background-color: orange;
   height: 20px;
   width: 20px;
+  border-radius: 50%;
+  border-width: 5px;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.viide:hover {
+  background-color: red;
+  border-color: orange;
+  border-style: solid;
 }
 
 #uks {
   top: 800px;
-  left: 300px;
+  left: 250px;
 }
 
 #kaubaluuk {
   top: 440px;
-  left: 270px;
+  left: 220px;
+}
+
+#konteiner {
+  max-width: 1058px;
+  min-width: 1058px;
+}
+
+#etik {
+  top: 900px;
+  left: 210px;
 }

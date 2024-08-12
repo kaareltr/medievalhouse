@@ -7,16 +7,34 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div>
-      <div class="viide" id="uks">punane täpp</div>
-      <div class="viide" id="kaubaluuk">kaubaluuk</div>
+    <div id="konteiner">
+      <button class="viide" id="uks" onclick="portaalFunction()"></button>
+      <button class="viide" id="kaubaluuk" onclick="luukFunction()"></button>
+      <button class="viide" id="etik" onclick="etikFunction()"></button>
 
       div that contains everything
       <div>header that hides</div>
       <div>
         image
-        <img src="images/keskaeg.png" alt="" />
+        <img class="taustapilt" src="images/keskaeg.png" alt="" />
       </div>
     </div>
+    <script>
+      function etikFunction() {
+        alert(
+          "ETIK\nMaja peasissepääsuni viiv trepp, mille kumbagi külge ehivad nn etikukivid - püstjad kiviplaadid, mille esikülg on kaunistatud omanikku iseloomustavate motiivide v peremärgi vm sümboolikaga."
+        );
+      }
+      function luukFunction() {
+        alert(
+          "KAUBALUUK\nKatuse alusele kaubakorrusele avanev luuk, mille kaudu saab vintsiga üles tõstetud asju laokorrustele ja sealt ära. Kaubaluugud on reeglina suhteliselt lihtsa ja kogu lina lõikes ka suhteliselt sarnase kujuga. Luugiavade küljed on reeglina faasitud ja siledaks tahutud paeplokkidest. Ava kaarjas sillus samamoodi viimistletud."
+        );
+      }
+      function portaalFunction() {
+        alert(
+          "PORTAAL\nHoone peasissepääs, mis on sageli vormistatud väga esindusliku raidkiviteosena. Sageli on see ainuke või üks väheseid elemente, mis on vormistatud teravkaarsena. Mitmetel portaalidel on töödeldud kivipinnad viimistletud mitmevärvilisena. Portaalide dateerimisel lähtutakse kindlalt dateeritavatest ja tuntud eeskujudest, nagu kirikud vm avalikud hooned."
+        );
+      }
+    </script>
   </body>
 </html>
