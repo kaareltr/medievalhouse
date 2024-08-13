@@ -27,7 +27,7 @@
 
 #kaubaluuk {
   top: 440px;
-  left: 220px;
+  left: 200px;
 }
 
 #konteiner {
@@ -38,4 +38,29 @@
 #etik {
   top: 900px;
   left: 210px;
+}
+
+#aken {
+  top: 750px;
+  left: 100px;
+}
+#korsten {
+  top: 650px;
+  left: 400px;
+}
+#vahelagi {
+  top: 900px;
+  left: 400px;
+}
+#dornseaken {
+  top: 600px;
+  left: 750px;
+}
+#diele {
+  top: 850px;
+  left: 250px;
+}
+#dornse {
+  top: 730px;
+  left: 600px;
 }
