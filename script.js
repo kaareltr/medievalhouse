@@ -1,3 +1,20 @@
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function () {
+  modal.style.display = "block";
+};
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
 function etikFunction() {
   alert(
     "ETIK\nMaja peasissepääsuni viiv trepp, mille kumbagi külge ehivad nn etikukivid - püstjad kiviplaadid, mille esikülg on kaunistatud omanikku iseloomustavate motiivide v peremärgi vm sümboolikaga.\nmitmed etikud on olnud nii suured, et nende sees - trepi all on olnud võlvitud ruum, mis on olnud eraldi sissepääsuga või ühendatud diele aluse keldriga"
