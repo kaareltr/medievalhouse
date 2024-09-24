@@ -1,17 +1,32 @@
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function () {
+function openModal(modalId) {
+  var modal = document.getElementById(modalId);
   modal.style.display = "block";
-};
-span.onclick = function () {
+}
+
+function closeModal(modalId) {
+  var modal = document.getElementById(modalId);
   modal.style.display = "none";
+}
+
+document.getElementById("uks").onclick = function () {
+  openModal("ukseModal");
 };
+
+document.getElementById("dornseaken").onclick = function () {
+  openModal("dornseAknaModal");
+};
+
+var closeButtons = document.getElementsByClassName("close");
+for (var i = 0; i < closeButtons.length; i++) {
+  closeButtons[i].onclick = function () {
+    var modalId = this.getAttribute("data-modal");
+    closeModal(modalId);
+  };
+}
 
 window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target.classList.contains("modal")) {
+    event.target.style.display = "none";
   }
 };
 
@@ -25,11 +40,11 @@ function luukFunction() {
     "KAUBALUUK\nKatuse alusele kaubakorrusele avanev luuk, mille kaudu saab vintsiga üles tõstetud asju laokorrustele ja sealt ära. Kaubaluugud on reeglina suhteliselt lihtsa ja kogu linna lõikes ka suhteliselt sarnase kujuga. Luugiavade küljed on reeglina faasitud ja siledaks tahutud paeplokkidest. Ava kaarjas sillus samamoodi viimistletud."
   );
 }
-function portaalFunction() {
-  alert(
-    "PORTAAL\nHoone peasissepääs, mis on sageli vormistatud väga esindusliku raidkiviteosena. Sageli on see ainuke või üks väheseid elemente, mis on vormistatud teravkaarsena. Mitmetel portaalidel on töödeldud kivipinnad viimistletud mitmevärvilisena. Portaalide dateerimisel lähtutakse kindlalt dateeritavatest ja tuntud eeskujudest, nagu kirikud vm avalikud hooned."
-  );
-}
+// function portaalFunction() {
+//  alert(
+//    "PORTAAL\nHoone peasissepääs, mis on sageli vormistatud väga esindusliku raidkiviteosena. Sageli on see ainuke või üks väheseid elemente, mis on vormistatud teravkaarsena. Mitmetel portaalidel on töödeldud kivipinnad viimistletud mitmevärvilisena. Portaalide dateerimisel lähtutakse kindlalt dateeritavatest ja tuntud eeskujudest, nagu kirikud vm avalikud hooned."
+//  );
+//}
 function akenFunction() {
   alert(
     "AKEN\nMaja tänavapoolsel küljel sissepääsu kõrval paiknevad aknad on sageli väga suured - paeraamistusega liigendatud kõrged aknad valgustasid kõrget diele ruumi. Aknadetaile võib sageli leida taaskasutatud materjlina müüridest ning need on äratuntavad puidust aknaraami jaoks mõeldud valtsi ning trelliaukude järgi."
@@ -45,11 +60,11 @@ function lagiFunction() {
     "VAHELAGI\nkeldri ja eluruumide vaj´heline lagi oli tüüpiliselt mitmekihilise konstruktsiooniga. Talad toetusid seinas olevatele kivikonsoolidele ning talade peale oli kiht murtud pinnaga paeplaate. selle peal kiht kasetohtu ning selle peal sambla ja liiva kihid. Selline laekonstruktsioon tagas muuhulgas ka teatava tulekindluse."
   );
 }
-function dornseakenFunction() {
-  alert(
-    "DORNSE AKEN\nPrivaatsema eluruumi, ehk dornse aken oli ruumi suurust arvestades samuti suhteliselt suur ning sageli väga esinduslikult vormistatud ja kujundatud. akende vahelised müüriosad olid kaunistatud sammastega, mis kandsid ajastule omaseid stiilitunnuseid - on näiteid gootikast barokini."
-  );
-}
+//function dornseakenFunction() {
+//  alert(
+//    "DORNSE AKEN\nPrivaatsema eluruumi, ehk dornse aken oli ruumi suurust arvestades samuti suhteliselt suur ning sageli väga esinduslikult vormistatud ja kujundatud. akende vahelised müüriosad olid kaunistatud sammastega, mis kandsid ajastule omaseid stiilitunnuseid - on näiteid gootikast barokini."
+//  );
+//}
 function dieleFunction() {
   alert(
     "DIELE\nMaja peamine elu- ja tööruum, mille nurgas oli mantelkorstna alune köök. hilisematel sajanditel muutus see esindusruumiks, kus asus ülemistele korrustele viiv paraadse ilmega trepp."

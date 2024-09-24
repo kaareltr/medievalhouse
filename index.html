@@ -9,35 +9,80 @@
 
   <body>
     <div id="konteiner">
-      <button class="viide" id="uks" onclick="portaalFunction()"></button>
-      <button class="viide" id="kaubaluuk" onclick="luukFunction()"></button>
-      <button class="viide" id="etik" onclick="etikFunction()"></button>
-      <button class="viide" id="aken" onclick="akenFunction()"></button>
-      <button class="viide" id="korsten" onclick="korstenFunction()"></button>
-      <button class="viide" id="vahelagi" onclick="lagiFunction()"></button>
-      <button
-        class="viide"
-        id="dornseaken"
-        onclick="dornseakenFunction()"
-      ></button>
-      <button class="viide" id="diele" onclick="dieleFunction()"></button>
+      <!-- Buttons -->
+
+      <button class="viide" id="uks">ukseNupp</button>
+      <button class="viide" id="kaubaluuk" onclick="luukFunction()">
+        luuk
+      </button>
+      <button class="viide" id="etik" onclick="etikFunction()">etik</button>
+      <button class="viide" id="aken" onclick="akenFunction()">aken</button>
+      <button class="viide" id="korsten" onclick="korstenFunction()">
+        korsten
+      </button>
+      <button class="viide" id="vahelagi" onclick="lagiFunction()">lagi</button>
+      <button class="viide" id="dornseaken">dornseAken</button>
+      <button class="viide" id="diele" onclick="dieleFunction()">diele</button>
+      <button class="viide" id="dornse" onclick="dornseFunction()">
+        dornse
+      </button>
+
+      <!-- Image -->
+      <div>
+        <img class="taustapilt" src="images/keskaeg.png" alt="" />
+      </div>
+
+      <!-- Modals -->
+
+      <div id="ukseModal" class="modal">
+        <div class="modal-content">
+          <span class="close" data-modal="ukseModal">&times;</span>
+          <p>UKS</p>
+          <p>
+            Hoone peasissepääs, mis on sageli vormistatud väga esindusliku
+            raidkiviteosena. Sageli on see ainuke või üks väheseid elemente, mis
+            on vormistatud teravkaarsena. Mitmetel portaalidel on töödeldud
+            kivipinnad viimistletud mitmevärvilisena. Portaalide dateerimisel
+            lähtutakse kindlalt dateeritavatest ja tuntud eeskujudest, nagu
+            kirikud vm avalikud hooned.
+          </p>
+        </div>
+      </div>
+
+      <div id="dornseAknaModal" class="modal">
+        <div class="modal-content">
+          <span class="close" data-modal="dornseAknaModal">&times;</span>
+          <p>DORNSE AKEN</p>
+          <p>
+            Privaatsema eluruumi, ehk dornse aken oli ruumi suurust arvestades
+            samuti suhteliselt suur ning sageli väga esinduslikult vormistatud
+            ja kujundatud. akende vahelised müüriosad olid kaunistatud
+            sammastega, mis kandsid ajastule omaseid stiilitunnuseid - on
+            näiteid gootikast barokini.
+            <img
+              src="images/sammas.png"
+              alt="Image of an impost pillar separating two windows."
+            />
+          </p>
+        </div>
+      </div>
+
+      <div id="dornseModal" class="modal">
+        <div class="modal-content">
+          <span class="close" data-modal="dornseModal">&times;</span>
+          <p>DORNSE</p>
+          <p>
+            Maja peakorruse ruumidest privaatsem. See oli ainuke
+            kerishüpokaustiga köetav ruum. Osades hoonetes oli selle ruumi kaudu
+            ainus sissepääs selle all olevasse keldriruumi.
+          </p>
+        </div>
+      </div>
 
       div that contains everything
       <div>header that hides</div>
-      <div>
-        image
-        <img class="taustapilt" src="images/keskaeg.png" alt="" />
-      </div>
     </div>
 
-    <button id="myBtn">openButton</button>
-
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>text in modal</p>
-      </div>
-    </div>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
