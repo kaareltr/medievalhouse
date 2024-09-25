@@ -4,7 +4,7 @@
 }
 
 .viide {
-  position: relative;
+  position: absolute;
   background-color: orange;
   height: 20px;
   width: 20px;
@@ -31,8 +31,10 @@
 }
 
 #konteiner {
+  position: relative;
   max-width: 1058px;
   min-width: 1058px;
+  margin: 0 auto;
 }
 
 #etik {
@@ -81,10 +83,11 @@
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 5% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 600px;
 }
 
 /* The Close Button */
@@ -102,7 +105,20 @@
   cursor: pointer;
 }
 
-#myBtn {
-  top: 720px;
-  left: 600px;
+@media (max-width: 768px) {
+  .taustapilt {
+    max-width: 100%;
+    height: auto;
+  }
+  .viide {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.modal-content img {
+  max-width: 100%; /* Pilt ei lähe modaaliaknast laiemaks */
+  height: auto; /* Säilitab pildi proportsioonid */
+  display: block; /* Tagab, et pilt ei oleks inline ja saaks kasutada margin-efekte */
+  margin: 10px 0; /* Lisab pildile veidi ruumi üla- ja alaservas */
 }
