@@ -16,6 +16,14 @@ document.getElementById("dornseaken").onclick = function () {
   openModal("dornseAknaModal");
 };
 
+document.getElementById("dornse").onclick = function () {
+  openModal("dornseModal");
+};
+
+document.getElementById("kaubaluuk").onclick = function () {
+  openModal("luukModal");
+};
+
 var closeButtons = document.getElementsByClassName("close");
 for (var i = 0; i < closeButtons.length; i++) {
   closeButtons[i].onclick = function () {
@@ -35,11 +43,11 @@ function etikFunction() {
     "ETIK\nMaja peasissepääsuni viiv trepp, mille kumbagi külge ehivad nn etikukivid - püstjad kiviplaadid, mille esikülg on kaunistatud omanikku iseloomustavate motiivide v peremärgi vm sümboolikaga.\nmitmed etikud on olnud nii suured, et nende sees - trepi all on olnud võlvitud ruum, mis on olnud eraldi sissepääsuga või ühendatud diele aluse keldriga"
   );
 }
-function luukFunction() {
-  alert(
-    "KAUBALUUK\nKatuse alusele kaubakorrusele avanev luuk, mille kaudu saab vintsiga üles tõstetud asju laokorrustele ja sealt ära. Kaubaluugud on reeglina suhteliselt lihtsa ja kogu linna lõikes ka suhteliselt sarnase kujuga. Luugiavade küljed on reeglina faasitud ja siledaks tahutud paeplokkidest. Ava kaarjas sillus samamoodi viimistletud."
-  );
-}
+//function luukFunction() {
+//  alert(
+//    "KAUBALUUK\nKatuse alusele kaubakorrusele avanev luuk, mille kaudu saab vintsiga üles tõstetud asju laokorrustele ja sealt ära. Kaubaluugud on reeglina suhteliselt lihtsa ja kogu linna lõikes ka suhteliselt sarnase kujuga. Luugiavade küljed on reeglina faasitud ja siledaks tahutud paeplokkidest. Ava kaarjas sillus samamoodi viimistletud."
+//  );
+//}
 // function portaalFunction() {
 //  alert(
 //    "PORTAAL\nHoone peasissepääs, mis on sageli vormistatud väga esindusliku raidkiviteosena. Sageli on see ainuke või üks väheseid elemente, mis on vormistatud teravkaarsena. Mitmetel portaalidel on töödeldud kivipinnad viimistletud mitmevärvilisena. Portaalide dateerimisel lähtutakse kindlalt dateeritavatest ja tuntud eeskujudest, nagu kirikud vm avalikud hooned."
