@@ -122,3 +122,57 @@
   display: block; /* Tagab, et pilt ei oleks inline ja saaks kasutada margin-efekte */
   margin: 10px 0; /* Lisab pildile veidi ruumi üla- ja alaservas */
 }
+
+.tooltip {
+  position: fixed; /* Ensure it moves with the viewport */
+  background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap; /* Prevents text wrapping */
+  pointer-events: none; /* Prevents blocking user interactions */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.2s ease; /* Smooth fade-in/out */
+  z-index: 1000;
+}
+
+.page {
+  display: none; /* By default, pages are hidden */
+}
+
+.page.active {
+  display: block; /* Only the active page is visible */
+}
+
+/* Optional: Button container styling */
+#page-switcher {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 1000;
+}
+
+#page-switcher button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#page-switcher button:hover {
+  background-color: #005bb5;
+}
+
+/* To prevent content overlap, add padding at the top of the page */
+body {
+  padding-top: 60px; /* Adjust based on the height of the header */
+}
