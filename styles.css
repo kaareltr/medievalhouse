@@ -67,6 +67,16 @@
   left: 800px;
 }
 
+#fassaad {
+  top: 600px;
+  left: 200px;
+}
+
+#krohvlagi {
+  top: 580px;
+  left: 750px;
+}
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */

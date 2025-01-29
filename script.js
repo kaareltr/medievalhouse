@@ -44,6 +44,14 @@ document.getElementById("diele").onclick = function () {
   openModal("dieleModal");
 };
 
+document.getElementById("fassaad").onclick = function () {
+  openModal("fassaadiModal");
+};
+
+document.getElementById("krohvlagi").onclick = function () {
+  openModal("krohvlaeModal");
+};
+
 var closeButtons = document.getElementsByClassName("close");
 for (var i = 0; i < closeButtons.length; i++) {
   closeButtons[i].onclick = function () {
@@ -107,29 +115,14 @@ window.onclick = function (event) {
 const tooltip = document.getElementById("tooltip");
 
 function showTooltip(event, text) {
-  const tooltip = document.getElementById("tooltip");
-
-  // Set the tooltip content
-  tooltip.textContent = text;
-
-  // Get the button's position in the document
-  const buttonRect = event.target.getBoundingClientRect();
-
-  // Calculate the tooltip position, considering scroll offset
-  const top = buttonRect.top + window.scrollY; // Add scrollY for vertical scroll
-  const left = buttonRect.left + window.scrollX; // Add scrollX for horizontal scroll
-
-  // Position the tooltip near the button
-  tooltip.style.top = `${top - 40}px`; // Adjust tooltip above the button
-  tooltip.style.left = `${left}px`; // Align tooltip horizontally with the button
-
-  // Show the tooltip
-  tooltip.style.display = "block";
+  tooltip.textContent = text; // Set the tooltip text
+  tooltip.style.opacity = "1"; // Make it visible
+  tooltip.style.left = `${event.pageX + 10}px`; // Position slightly offset from cursor
+  tooltip.style.top = `${event.pageY + 10}px`;
 }
 
 function hideTooltip() {
-  const tooltip = document.getElementById("tooltip");
-  tooltip.style.display = "none";
+  tooltip.style.opacity = "0"; // Hide the tooltip
 }
 
 // Get references to buttons and pages

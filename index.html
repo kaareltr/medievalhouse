@@ -12,6 +12,8 @@
       <button id="toPage1">Page 1</button>
       <button id="toPage2">Page 2</button>
     </div>
+    <div id="tooltip" class="tooltip"></div>
+
     <div id="page1" class="page">
       <div id="konteiner">
         <!-- Buttons -->
@@ -71,8 +73,6 @@
             onmouseout="hideTooltip()"
           ></button>
         </div>
-
-        <div id="tooltip" class="tooltip"></div>
 
         <!-- Image -->
         <div>
@@ -226,13 +226,50 @@
 
     <div id="page2" class="page">
       <div id="konteiner">
-        <h1>Additional Information</h1>
-        <p>This is the second page content.</p>
-        <img
-          src="images/kaasaeg.png"
-          class="taustapilt"
-          alt="Medieval House Image"
-        />
+        <div class="button-container">
+          <button
+            class="viide"
+            id="fassaad"
+            onmouseover="showTooltip(event, 'FASSAAD')"
+            onmouseout="hideTooltip()"
+          ></button>
+
+          <button
+            class="viide"
+            id="krohvlagi"
+            onmouseover="showTooltip(event, 'KROHVLAGI')"
+            onmouseout="hideTooltip()"
+          ></button>
+        </div>
+
+        <div>
+          <img
+            src="images/kaasaeg.png"
+            class="taustapilt"
+            alt="Image of a building of medieval origin"
+          />
+        </div>
+
+        <div id="krohvlaeModal" class="modal">
+          <div class="modal-content">
+            <span class="close" data-modal="krohvlaeModal">&times;</span>
+            <p>KROHVLAGI</p>
+            <p>moodne viimistlus kattis vanema.</p>
+          </div>
+        </div>
+
+        <div id="fassaadiModal" class="modal">
+          <div class="modal-content">
+            <span class="close" data-modal="fassaadiModal">&times;</span>
+            <p>FASSAAD</p>
+            <p>
+              Hoone tänvapoolne välisseinad - tegelikult üldse kõik kandvad
+              konstruktsioonid ehitati ümber võimalikult vähese uue materjaliga.
+              Kuna ehitustehnoloogia oli sarnane, siis kasutati vanad kivid
+              kohapeal ära. Illustratsiooniks vt Tallinna 1825
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
