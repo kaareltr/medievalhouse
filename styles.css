@@ -171,7 +171,7 @@
 #page-switcher button {
   margin: 0 5px;
   padding: 10px 20px;
-  background-color: #0078d4;
+  background-color: #797c7e;
   color: white;
   border: none;
   border-radius: 5px;
@@ -179,7 +179,7 @@
 }
 
 #page-switcher button:hover {
-  background-color: #005bb5;
+  background-color: #66686a;
 }
 
 /* To prevent content overlap, add padding at the top of the page */
