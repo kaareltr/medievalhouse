@@ -186,3 +186,38 @@
 body {
   padding-top: 60px; /* Adjust based on the height of the header */
 }
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 20px;
+}
+
+main {
+  padding: 50px;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.btn {
+  background: #4caf50;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #45a049;
+}
