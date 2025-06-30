@@ -77,6 +77,21 @@
   left: 750px;
 }
 
+#paraadtrepp {
+  top: 750px;
+  left: 510px;
+}
+
+#v6lvlagi {
+  top: 860px;
+  left: 550px;
+}
+
+#dornsekelder {
+  top: 860px;
+  left: 800px;
+}
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -220,4 +235,9 @@ main {
 
 .btn:hover {
   background: #45a049;
+}
+
+button.active-button {
+  background-color: orange !important;
+  color: black !important;
 }

@@ -52,6 +52,18 @@ document.getElementById("krohvlagi").onclick = function () {
   openModal("krohvlaeModal");
 };
 
+document.getElementById("paraadtrepp").onclick = function () {
+  openModal("paraadtreppModal");
+};
+
+document.getElementById("v6lvlagi").onclick = function () {
+  openModal("v6lvlagiModal");
+};
+
+document.getElementById("dornsekelder").onclick = function () {
+  openModal("dornseKelderModal");
+};
+
 var closeButtons = document.getElementsByClassName("close");
 for (var i = 0; i < closeButtons.length; i++) {
   closeButtons[i].onclick = function () {
@@ -83,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Get references to buttons and pages
   const toPage1Button = document.getElementById("toPage1");
   const toPage2Button = document.getElementById("toPage2");
+  const toHomeButton = document.getElementById("toHome");
   const page1 = document.getElementById("page1");
   const page2 = document.getElementById("page2");
 
@@ -90,17 +103,26 @@ document.addEventListener("DOMContentLoaded", function () {
   function showPage1() {
     page1.classList.add("active");
     page2.classList.remove("active");
+    toPage1Button.classList.add("active-button");
+    toPage2Button.classList.remove("active-button");
+
+    console.log("Page 1 Button Classes:", toPage1Button.classList);
+    console.log("Page 2 Button Classes:", toPage2Button.classList);
+
     localStorage.setItem("currentPage", "page1");
   }
 
   function showPage2() {
     page2.classList.add("active");
     page1.classList.remove("active");
+    toPage2Button.classList.add("active-button");
+    toPage1Button.classList.remove("active-button");
     localStorage.setItem("currentPage", "page2");
   }
 
   // Load the last viewed page on page load
   const lastPage = localStorage.getItem("currentPage");
+  console.log("Last page from localStorage:", lastPage);
   if (lastPage === "page2") {
     showPage2();
   } else {
@@ -111,9 +133,16 @@ document.addEventListener("DOMContentLoaded", function () {
   if (toPage1Button) toPage1Button.addEventListener("click", showPage1);
   if (toPage2Button) toPage2Button.addEventListener("click", showPage2);
 
+  if (toHomeButton)
+    toHomeButton.addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+
   // Debugging: Log the last viewed page
   console.log(
     "Last viewed page:",
     localStorage.getItem("currentPage") || "None"
   );
+  console.log("Page 1 Button Classes:", toPage1Button.classList);
+  console.log("Page 2 Button Classes:", toPage2Button.classList);
 });

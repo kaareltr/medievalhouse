@@ -9,6 +9,7 @@
 
   <body>
     <div id="page-switcher">
+      <button id="toHome">ESILEHELE</button>
       <button id="toPage1">AD 1500</button>
       <button id="toPage2">AD 1900</button>
     </div>
@@ -92,7 +93,13 @@
               Mitmetel portaalidel on töödeldud kivipinnad viimistletud
               mitmevärvilisena. Portaalide dateerimisel lähtutakse kindlalt
               dateeritavatest ja tuntud eeskujudest, nagu kirikud vm avalikud
-              hooned.
+              hooned. <br />Vene tn 17 portaal:
+              <img src="images/vene17.png" alt="" />
+              Illustratsioon Muinsuskaitseameti
+              <a
+                href="https://register.muinas.ee/ftp/DIGI_2013/pdf/eraT-0-76_001_0000324.pdf"
+                >arhiivist</a
+              >
             </p>
           </div>
         </div>
@@ -142,8 +149,18 @@
               Kaubaluugid on reeglina suhteliselt lihtsa ja kogu linna lõikes ka
               suhteliselt sarnase kujuga. Luugiavade küljed on reeglina faasitud
               ja siledaks tahutud paeplokkidest. Ava kaarjas sillus samamoodi
-              viimistletud.
+              viimistletud. Vana-Turg 6 fassaadi vaade kahe kaubaluugiga:
+              <img src="images/kaubaluuk_mka.png" alt="" />
+              Illustratsioon Muinsuskaitseameti
+              <a
+                href="https://register.muinas.ee/ftp/DIGI_2013/pdf/eraT-0-76_001_0012495.pdf
+              "
+                >arhiivist</a
+              >
             </p>
+            Muuhulgas on sarnaseid avasid ka osade linnamüüri tornide linna
+            poolsel küljel ning need on tegumoelt sarnased muude ehitiste
+            omadega.
           </div>
         </div>
 
@@ -225,9 +242,6 @@
             </p>
           </div>
         </div>
-
-        div that contains everything
-        <div>header that hides</div>
       </div>
     </div>
 
@@ -245,6 +259,27 @@
             class="viide"
             id="krohvlagi"
             onmouseover="showTooltip(event, 'KROHVLAGI')"
+            onmouseout="hideTooltip()"
+          ></button>
+
+          <button
+            class="viide"
+            id="paraadtrepp"
+            onmouseover="showTooltip(event, 'PARAADTREPP')"
+            onmouseout="hideTooltip()"
+          ></button>
+
+          <button
+            class="viide"
+            id="v6lvlagi"
+            onmouseover="showTooltip(event, 'V6LVLAGI')"
+            onmouseout="hideTooltip()"
+          ></button>
+
+          <button
+            class="viide"
+            id="dornsekelder"
+            onmouseover="showTooltip(event, 'DORNSE ALUNE KELDER')"
             onmouseout="hideTooltip()"
           ></button>
         </div>
@@ -265,15 +300,65 @@
           </div>
         </div>
 
+        <div id="paraadtreppModal" class="modal">
+          <div class="modal-content">
+            <span class="close" data-modal="paraadtreppModal">&times;</span>
+            <p>PARAADTREPP</p>
+            <p>
+              Uus arusaam esinduslikkusest tõi mõisates ja linnapaleedes nähtud
+              ruumilahendused linnakruntide kitsastesse majadesse. Baroksete
+              piiretega laiad trepid viisid fuajee rolli saanud dielest teise
+              korruse ruumidesse.
+            </p>
+          </div>
+        </div>
+
+        <div id="v6lvlagiModal" class="modal">
+          <div class="modal-content">
+            <span class="close" data-modal="v6lvlagiModal">&times;</span>
+            <p>VÕLVLAGI</p>
+            <p>
+              Võlvitud ruumid elamute keldrites on sageli hilisemast
+              ehitusjärgust - varauusaegsed või umbes nii. Loomulikult on
+              erandlikke hooneid ja lagesid. Keskaegseks võib pidada näiteks
+              hüpokaustide kütteruumide madalaid võlve.
+            </p>
+          </div>
+        </div>
+
         <div id="fassaadiModal" class="modal">
           <div class="modal-content">
             <span class="close" data-modal="fassaadiModal">&times;</span>
             <p>FASSAAD</p>
             <p>
               Hoone tänvapoolne välisseinad - tegelikult üldse kõik kandvad
-              konstruktsioonid ehitati ümber võimalikult vähese uue materjaliga.
-              Kuna ehitustehnoloogia oli sarnane, siis kasutati vanad kivid
-              kohapeal ära. Illustratsiooniks vt Tallinna 1825
+              konstruktsioonid - ehitati ümber võimalikult vähese uue
+              materjaliga. Kuna ehitustehnoloogia oli sarnane, siis kasutati
+              vanad kivid kohapeal ära. Illustratsiooniks vt Tallinna 1825
+              <img src="images/1825pikk.png" alt="" width="400" />
+              <br />Pikk tn 66 hoone pärast 19. sajandi ümberehitust, mille
+              käigus ühtlustati kaks keskaegset hoonemahtu ühtse klassitsistliku
+              fassaadi taha:
+              <img src="images/PC011388.JPG" alt="" width="400" />
+            </p>
+          </div>
+        </div>
+
+        <div id="dornseKelderModal" class="modal">
+          <div class="modal-content">
+            <span class="close" data-modal="dornseKelderModal">&times;</span>
+            <p>DORNSE ALUNE KELDER</p>
+            <p>
+              sageli üks arhailisemaid ruume. Mitmes hoones on seda peetud
+              kinnistu hoonestu arengu esimesest etapist pärit ehitise osaks. on
+              arvatud, et varaseimad elamud koosnesid puidust või sõrestikust
+              tänava äärsest osast ning kinnistu sügavuses asuvast
+              kiviehitisest, mis oli turvalisem tuleohutuse kui sissetungijate
+              mõttes. Keskaegsed keldriruumid sisaldavad mitmeid äratuntavaid
+              elemente, mis on iseloomulikud jus tallinna keskaegsele
+              arhitektuurile. Püstisest paeplaatidest uksesilluste kasutamise
+              komme tugineb kohaliku ehitusmaterjali omadustele. Pea iga
+              keskaegse keldriruumi seinas on nõndanimetatud küünlanišid.
             </p>
           </div>
         </div>
